@@ -14,44 +14,46 @@ Json,21,85
 Then, the output of the program should be:
 [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 '''
-
-multiline = []
-all_data = []
-
-while True:
-    line = input('Enter your data = ')
-    if line:
-        multiline.append(line)
+#
+# multiline = []
+# all_data = []
+#
+# while True:
+#     line = input('Enter your data = ')
+#     if line:
+#         multiline.append(line)
         # data = line.split('\n')
         # a = str(data).split()
         # total_data.append(a)
-    else:
+    # else:
+    #     break
+    # data = line.split(',')
+    # all_data.append(data)
+
+# all_name = []
+# all_age = []
+# all_score = []
+# total_data = []
+# print(all_data)
+#
+# for i in all_data:
+#     all_name.append(all_data[i][0])
+#     all_age.append(all_data[i][1])
+#
+#
+# print(total_data)
+# print(all_name)
+# print(all_age)
+# print(all_score)
+
+from operator import itemgetter
+
+mylist = []
+while True:
+    s = input('Enter the details =')
+    if not s:
         break
-    data = line.split(',')
-    all_data.append(data)
+    mylist.append(tuple(s.split(',')))
 
-all_name = []
-all_age = []
-all_score = []
-total_data = []
-print(all_data)
-
-for i in all_data:
-    all_name.append(all_data[i][0])
-    all_age.append(all_data[i][1])
-
-
-print(total_data)
-print(all_name)
-print(all_age)
-print(all_score)
-
-
-# for i in range(len(all_data)):
-    # all_name.append(all_data[i][0])
-    # all_age.append(all_data[i][1])
-    # all_score.append(all_data[i][2])
-    # my = all_data[i]
-    # print(my)
-
-# print(all_name, all_age, all_score)
+result = sorted(mylist, key=itemgetter(0,1,2))
+print(result)
