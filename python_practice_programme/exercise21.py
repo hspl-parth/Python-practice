@@ -1,0 +1,47 @@
+'''
+A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT
+and RIGHT with a given steps. The trace of robot movement is shown as the following:
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+¡­
+The numbers after the direction are steps. Please write a program to compute the distance from the current
+position after a sequence of movement and original point. If the distance is a float, then just print the nearest
+integer.
+Example:
+If the following tuples are given as input to the program:
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+Then, the output of the program should be:
+2
+'''
+
+import math
+
+multiline = []
+x, y = 0, 0
+
+while True:
+    line = input('Enter your step to move = ')
+
+    if line:
+        multiline.append(line)
+    else:
+        break
+
+    digit = line.split()
+    for i in range(len(digit)):
+        if digit[i] == 'UP':
+            y = y + int(digit[i + 1])
+        elif digit[i] == 'DOWN':
+            y = y - int(digit[i + 1])
+        elif digit[i] == 'LEFT':
+            x = x - int(digit[i + 1])
+        elif digit[i] == 'RIGHT':
+            x = x + int(digit[i + 1])
+
+distance = math.sqrt(x**2 + y**2)
+print(math.floor(distance))
