@@ -13,7 +13,7 @@ In case of input data being supplied to the question, it should be assumed to be
 num1 = int(input('Enter any number = '))
 my_list = []
 
-for i in range(0, num1):
+for i in range(0, num1+1):
     if i % 5 == 0 and i % 7 == 0:
         my_list.append(str(i))
 
