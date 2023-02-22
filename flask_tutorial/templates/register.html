@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h1>Register</h1>
+
+<form method="post">
+
+
+    <p>
+        <div class="mb-3 row" style="margin-top: 5px;">
+            <label for="Name" class="col-sm-2 col-form-label" style="">Name of User</label>
+            <div class="col-sm-10">
+              <input type="text" name="Name" placeholder="Name of User"></input>
+          </div>
+      </div>
+  </p>
+
+  <p>
+        <div class="mb-3 row" style="margin-top: 5px;">
+            <label for="Login" class="col-sm-2 col-form-label" style="">Login</label>
+            <div class="col-sm-10">
+              <input type="text" name="Login" placeholder="Login id for user"></input>
+          </div>
+      </div>
+  </p>
+
+  <p>
+        <div class="mb-3 row" style="margin-top: 5px;">
+            <label for="Password" class="col-sm-2 col-form-label" style="">Password</label>
+            <div class="col-sm-10">
+              <input type="text" name="Password" placeholder="Password for user"></input>
+          </div>
+      </div>
+  </p>
+
+  <p>
+    <button class="btn btn-secondary" type="submit">Submit</button>
+  </p>
+
+
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+

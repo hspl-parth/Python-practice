@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<h1>Login Page</h1>
+
+{% for h_user in h_users %}
+<div class='book'>
+    <h3>#{{ h_user[0] }}</h3>
+    <i><p>Name = {{ h_user[1] }}</p></i>
+    <i><p>Login = {{ h_user[2] }}</p></i>
+    <i><p>Password = {{ h_user[3] }}</p></i>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
